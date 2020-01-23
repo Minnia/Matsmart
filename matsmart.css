@@ -1,0 +1,59 @@
+#blockOne {
+  background-color: green;
+  grid-area: block1;
+
+}
+
+#blockTwo {
+  background-color: brown;
+  grid-area: block2;
+}
+#blockThree {
+  background-color: red;
+  grid-area: block3;
+}
+#blockFour {
+  background-color: blue;
+  grid-area: block4;
+}
+
+
+@media only screen and (max-width: 1000px){
+  #container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: repeat(4, 200px);
+    grid-template-areas: 
+    "block1 -"
+    "block1 -"
+    "block3 block2" 
+    "block4 block2";
+    border: 1px solid black;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 800px){
+  #container{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3,200px);
+    grid-template-areas: 
+    "block1 -"
+    "block2 -"
+    "block3 block4";
+  }
+}
+
+/* Block1 |
+| Block1 |
+| Block3 Block2 |
+| Block4 Block2 */
+
